@@ -5,16 +5,14 @@
   "dependencies": {
     "@spatial-id/javascript-sdk": "github:spatial-id/javascript-sdk",
     "@turf/bbox": "^6.5.0",
-    "@types/gh-pages": "^5.0.0",
     "classnames": "^2.3.2",
-    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-query": "^3.39.3",
     "react-responsive": "^9.0.2",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^3.5.0"
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "prestart": "node ./bin/download-style.js",
@@ -22,8 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "NODE_OPTIONS='--openssl-legacy-provider' yarn build && gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -43,20 +40,20 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://komasn.github.io/test_smartmap/",
+  "homepage": "./",
   "devDependencies": {
     "@geolonia/embed": "^4.0.0",
-    "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.5.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "@types/geojson": "^7946.0.10",
-    "@types/jest": "^29.5.7",
-    "@types/node": "^20.8.10",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.14",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "maplibre-gl": "^3.5.2",
+    "maplibre-gl": "^2.4.0",
     "sass": "^1.59.2",
-    "typescript": "^5.2.2",
+    "typescript": "^4.9.5",
     "undici": "^5.21.0"
   }
 }
