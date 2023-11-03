@@ -1,19 +1,18 @@
 import Point from '@mapbox/point-geometry';
-import drawCollisionDebug from './draw_collision_debug';
+import {drawCollisionDebug} from './draw_collision_debug';
 
-import SegmentVector from '../data/segment';
-import pixelsToTileUnits from '../source/pixels_to_tile_units';
+import {SegmentVector} from '../data/segment';
+import {pixelsToTileUnits} from '../source/pixels_to_tile_units';
 import * as symbolProjection from '../symbol/projection';
 import {EvaluatedZoomSize, evaluateSizeForFeature, evaluateSizeForZoom} from '../symbol/symbol_size';
 import {mat4} from 'gl-matrix';
-import StencilMode from '../gl/stencil_mode';
-import DepthMode from '../gl/depth_mode';
-import CullFaceMode from '../gl/cull_face_mode';
+import {StencilMode} from '../gl/stencil_mode';
+import {DepthMode} from '../gl/depth_mode';
+import {CullFaceMode} from '../gl/cull_face_mode';
 import {addDynamicAttributes} from '../data/bucket/symbol_bucket';
 
 import {getAnchorAlignment, WritingMode} from '../symbol/shaping';
 import ONE_EM from '../symbol/one_em';
-import {evaluateVariableOffset, TextAnchor} from '../symbol/symbol_layout';
 
 import {
     SymbolIconUniformsType,
@@ -22,22 +21,22 @@ import {
     symbolTextAndIconUniformValues
 } from './program/symbol_program';
 
-import type Painter from './painter';
-import type SourceCache from '../source/source_cache';
-import type SymbolStyleLayer from '../style/style_layer/symbol_style_layer';
+import type {Painter} from './painter';
+import type {SourceCache} from '../source/source_cache';
+import type {SymbolStyleLayer} from '../style/style_layer/symbol_style_layer';
 
-import type Texture from '../render/texture';
+import type {Texture} from '../render/texture';
 import type {OverscaledTileID} from '../source/tile_id';
 import type {UniformValues} from './uniform_binding';
 import type {SymbolSDFUniformsType} from '../render/program/symbol_program';
 import type {CrossTileID, VariableOffset} from '../symbol/placement';
-import type SymbolBucket from '../data/bucket/symbol_bucket';
-import type {SymbolBuffers} from '../data/bucket/symbol_bucket';
+import type {SymbolBucket, SymbolBuffers} from '../data/bucket/symbol_bucket';
 import type {TerrainData} from '../render/terrain';
-import type {SymbolLayerSpecification} from '../style-spec/types.g';
-import type Transform from '../geo/transform';
-import type ColorMode from '../gl/color_mode';
-import type Program from './program';
+import type {SymbolLayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {Transform} from '../geo/transform';
+import type {ColorMode} from '../gl/color_mode';
+import type {Program} from './program';
+import type {TextAnchor} from '../style/style_layer/variable_text_anchor';
 
 type SymbolTileRenderState = {
     segments: SegmentVector;
@@ -58,7 +57,7 @@ type SymbolTileRenderState = {
 
 const identityMat4 = mat4.identity(new Float32Array(16));
 
-export default function drawSymbols(painter: Painter, sourceCache: SourceCache, layer: SymbolStyleLayer, coords: Array<OverscaledTileID>, variableOffsets: {
+export function drawSymbols(painter: Painter, sourceCache: SourceCache, layer: SymbolStyleLayer, coords: Array<OverscaledTileID>, variableOffsets: {
     [_ in CrossTileID]: VariableOffset;
 }) {
     if (painter.renderPass !== 'translucent') return;
@@ -66,11 +65,11 @@ export default function drawSymbols(painter: Painter, sourceCache: SourceCache, 
     // Disable the stencil test so that labels aren't clipped to tile boundaries.
     const stencilMode = StencilMode.disabled;
     const colorMode = painter.colorModeForRenderPass();
-    const variablePlacement = layer.layout.get('text-variable-anchor');
+    const hasVariablePlacement = layer._unevaluatedLayout.hasValue('text-variable-anchor') || layer._unevaluatedLayout.hasValue('text-variable-anchor-offset');
 
     //Compute variable-offsets before painting since icons and text data positioning
     //depend on each other in this case.
-    if (variablePlacement) {
+    if (hasVariablePlacement) {
         updateVariableAnchors(coords, painter, layer, sourceCache,
             layer.layout.get('text-rotation-alignment'),
             layer.layout.get('text-pitch-alignment'),
@@ -118,10 +117,9 @@ function calculateVariableRenderShift(
     const {horizontalAlign, verticalAlign} = getAnchorAlignment(anchor);
     const shiftX = -(horizontalAlign - 0.5) * width;
     const shiftY = -(verticalAlign - 0.5) * height;
-    const variableOffset = evaluateVariableOffset(anchor, textOffset);
     return new Point(
-        (shiftX / textBoxScale + variableOffset[0]) * renderTextSize,
-        (shiftY / textBoxScale + variableOffset[1]) * renderTextSize
+        (shiftX / textBoxScale + textOffset[0]) * renderTextSize,
+        (shiftY / textBoxScale + textOffset[1]) * renderTextSize
     );
 }
 
@@ -149,7 +147,7 @@ function updateVariableAnchors(coords: Array<OverscaledTileID>,
 
         if (size) {
             const tileScale = Math.pow(2, tr.zoom - tile.tileID.overscaledZ);
-            const getElevation = painter.style.terrain ? (x: number, y: number) => painter.style.terrain.getElevation(coord, x, y) : null;
+            const getElevation = painter.style.map.terrain ? (x: number, y: number) => painter.style.map.terrain.getElevation(coord, x, y) : null;
             updateVariableAnchorsForBucket(bucket, rotateWithMap, pitchWithMap, variableOffsets,
                 tr, labelPlaneMatrix, coord.posMatrix, tileScale, size, updateTextFitIcon, getElevation);
         }
@@ -282,7 +280,7 @@ function drawLayerSymbols(
 
     const depthMode = painter.depthModeForSublayer(0, DepthMode.ReadOnly);
 
-    const variablePlacement = layer.layout.get('text-variable-anchor');
+    const hasVariablePlacement = layer._unevaluatedLayout.hasValue('text-variable-anchor') || layer._unevaluatedLayout.hasValue('text-variable-anchor-offset');
 
     const tileRenderState: Array<SymbolTileRenderState> = [];
 
@@ -291,7 +289,8 @@ function drawLayerSymbols(
         const bucket = tile.getBucket(layer) as SymbolBucket;
         if (!bucket) continue;
         const buffers = isText ? bucket.text : bucket.icon;
-        if (!buffers || !buffers.segments.get().length) continue;
+
+        if (!buffers || !buffers.segments.get().length || !buffers.hasVisibleVertices) continue;
         const programConfiguration = buffers.programConfigurations.get(layer.id);
 
         const isSDF = isText || bucket.sdfIcons;
@@ -301,7 +300,7 @@ function drawLayerSymbols(
 
         const program = painter.useProgram(getSymbolProgramName(isSDF, isText, bucket), programConfiguration);
         const size = evaluateSizeForZoom(sizeData, tr.zoom);
-        const terrainData = painter.style.terrain && painter.style.terrain.getTerrainData(coord);
+        const terrainData = painter.style.map.terrain && painter.style.map.terrain.getTerrainData(coord);
 
         let texSize: [number, number];
         let texSizeIcon: [number, number] = [0, 0];
@@ -332,19 +331,19 @@ function drawLayerSymbols(
         const labelPlaneMatrix = symbolProjection.getLabelPlaneMatrix(coord.posMatrix, pitchWithMap, rotateWithMap, painter.transform, s);
         const glCoordMatrix = symbolProjection.getGlCoordMatrix(coord.posMatrix, pitchWithMap, rotateWithMap, painter.transform, s);
 
-        const hasVariableAnchors = variablePlacement && bucket.hasTextData();
+        const hasVariableAnchors = hasVariablePlacement && bucket.hasTextData();
         const updateTextFitIcon = layer.layout.get('icon-text-fit') !== 'none' &&
             hasVariableAnchors &&
             bucket.hasIconData();
 
         if (alongLine) {
-            const getElevation = painter.style.terrain ? (x: number, y: number) => painter.style.terrain.getElevation(coord, x, y) : null;
+            const getElevation = painter.style.map.terrain ? (x: number, y: number) => painter.style.map.terrain.getElevation(coord, x, y) : null;
             const rotateToLine = layer.layout.get('text-rotation-alignment') === 'map';
             symbolProjection.updateLineLabels(bucket, coord.posMatrix, painter, isText, labelPlaneMatrix, glCoordMatrix, pitchWithMap, keepUpright, rotateToLine, getElevation);
         }
 
         const matrix = painter.translatePosMatrix(coord.posMatrix, tile, translate, translateAnchor),
-            uLabelPlaneMatrix = (alongLine || (isText && variablePlacement) || updateTextFitIcon) ? identityMat4 : labelPlaneMatrix,
+            uLabelPlaneMatrix = (alongLine || (isText && hasVariablePlacement) || updateTextFitIcon) ? identityMat4 : labelPlaneMatrix,
             uglCoordMatrix = painter.translatePosMatrix(glCoordMatrix, tile, translate, translateAnchor, true);
 
         const hasHalo = isSDF && layer.paint.get(isText ? 'text-halo-width' : 'icon-halo-width').constantOr(1) !== 0;
@@ -407,10 +406,12 @@ function drawLayerSymbols(
         const state = segmentState.state;
 
         context.activeTexture.set(gl.TEXTURE0);
+        // @ts-ignore
         state.atlasTexture.bind(state.atlasInterpolation, gl.CLAMP_TO_EDGE);
         if (state.atlasTextureIcon) {
             context.activeTexture.set(gl.TEXTURE1);
             if (state.atlasTextureIcon) {
+                // @ts-ignore
                 state.atlasTextureIcon.bind(state.atlasInterpolationIcon, gl.CLAMP_TO_EDGE);
             }
         }

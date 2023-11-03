@@ -1,41 +1,51 @@
-import {createMap, setMatchMedia, setPerformance, setWebGlContext} from '../../util/test/util';
+import {createMap, beforeMapTest} from '../../util/test/util';
 
 beforeEach(() => {
-    setPerformance();
-    setWebGlContext();
-    setMatchMedia();
+    beforeMapTest();
 });
 
 describe('requestRenderFrame', () => {
 
-    test('Map#_requestRenderFrame schedules a new render frame if necessary', () => {
+    test('Map#_requestRenderFrame schedules a new render frame if necessary', (done) => {
         const map = createMap();
         const spy = jest.spyOn(map, 'triggerRepaint');
         map._requestRenderFrame(() => {});
-        expect(spy).toHaveBeenCalledTimes(1);
-        map.remove();
-    });
+        expect(spy).toHaveBeenCalledTimes(0);
 
-    test('Map#_requestRenderFrame queues a task for the next render frame', done => {
-        const map = createMap();
-        const cb = jest.fn();
-        map._requestRenderFrame(cb);
-        map.once('render', () => {
-            expect(cb).toHaveBeenCalledTimes(1);
+        // wait for style to be loaded
+        map.once('data', () => {
+            spy.mockReset();
+            map._requestRenderFrame(() => {});
+            expect(spy).toHaveBeenCalledTimes(1);
             map.remove();
             done();
         });
     });
 
-    test('Map#_cancelRenderFrame cancels a queued task', done => {
+    test('Map#_requestRenderFrame should not schedule a render frame before style load', () => {
+        const map = createMap();
+        const spy = jest.spyOn(map, 'triggerRepaint');
+        map._requestRenderFrame(() => {});
+        expect(spy).toHaveBeenCalledTimes(0);
+        map.remove();
+    });
+
+    test('Map#_requestRenderFrame queues a task for the next render frame', async () => {
+        const map = createMap();
+        const cb = jest.fn();
+        map._requestRenderFrame(cb);
+        await map.once('render');
+        expect(cb).toHaveBeenCalledTimes(1);
+        map.remove();
+    });
+
+    test('Map#_cancelRenderFrame cancels a queued task', async () => {
         const map = createMap();
         const cb = jest.fn();
         const id = map._requestRenderFrame(cb);
         map._cancelRenderFrame(id);
-        map.once('render', () => {
-            expect(cb).toHaveBeenCalledTimes(0);
-            map.remove();
-            done();
-        });
+        await map.once('render');
+        expect(cb).toHaveBeenCalledTimes(0);
+        map.remove();
     });
 });
