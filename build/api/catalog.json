@@ -1,0 +1,1102 @@
+[
+  {
+    "type": "DataItem",
+    "id": "行政界（町字）",
+    "name": "行政界（町字）",
+    "class": "大字界",
+    "metadata": {}
+  },
+  {
+    "type": "DataItem",
+    "id": "市道道路網図",
+    "name": "市道道路網図",
+    "class": "高松市_路線",
+    "metadata": {}
+  },
+  {
+    "type": "Category",
+    "id": "都市計画情報",
+    "name": "都市計画情報",
+    "items": [
+      {
+        "type": "DataItem",
+        "id": "都市計画情報/都市計画区域界",
+        "name": "都市計画区域界",
+        "class": "都市計画区域界",
+        "metadata": {}
+      },
+      {
+        "type": "DataItem",
+        "id": "都市計画情報/都市計画基本図",
+        "name": "都市計画基本図",
+        "customDataSource": "kihonzu",
+        "metadata": {}
+      },
+      {
+        "type": "Category",
+        "id": "都市計画情報/用途地域",
+        "name": "用途地域",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/第一種低層住居専用地域",
+            "name": "第一種低層住居専用地域",
+            "class": "第一種低層住居専用地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/第二種低層住居専用地域",
+            "name": "第二種低層住居専用地域",
+            "class": "第二種低層住居専用地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/第一種中高層住居専用地域",
+            "name": "第一種中高層住居専用地域",
+            "class": "第一種中高層住居専用地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/第二種中高層住居専用地域",
+            "name": "第二種中高層住居専用地域",
+            "class": "第二種中高層住居専用地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/第一種住居地域",
+            "name": "第一種住居地域",
+            "class": "第一種住居地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/第二種住居地域",
+            "name": "第二種住居地域",
+            "class": "第二種住居地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/準住居地域",
+            "name": "準住居地域",
+            "class": "準住居地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/近隣商業地域",
+            "name": "近隣商業地域",
+            "class": "近隣商業地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/商業地域",
+            "name": "商業地域",
+            "class": "商業地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/準工業地域",
+            "name": "準工業地域",
+            "class": "準工業地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/工業地域",
+            "name": "工業地域",
+            "class": "工業地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/用途地域/工業専用地域",
+            "name": "工業専用地域",
+            "class": "工業専用地域",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "都市計画情報/特定用途制限地域",
+        "name": "特定用途制限地域",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/特定用途制限地域/一般・環境保全型",
+            "name": "一般・環境保全型",
+            "class": "一般・環境保全型",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/特定用途制限地域/幹線沿道型I型",
+            "name": "幹線沿道型I型",
+            "class": "幹線沿道型I型",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/特定用途制限地域/幹線沿道型II型",
+            "name": "幹線沿道型II型",
+            "class": "幹線沿道型II型",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "都市計画情報/防火地域等",
+        "name": "防火地域等",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/防火地域等/防火地域",
+            "name": "防火地域",
+            "class": "防火地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/防火地域等/準防火地域",
+            "name": "準防火地域",
+            "class": "準防火地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/防火地域等/法22条地域",
+            "name": "法22条地域",
+            "class": "法22条地域",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "都市計画情報/その他地域地区",
+        "name": "その他地域地区",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/その他地域地区/特別用途地区",
+            "name": "特別用途地区",
+            "class": "特別用途地区",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/その他地域地区/高度利用地域",
+            "name": "高度利用地域",
+            "class": "高度利用地域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/その他地域地区/都市再生特別地区",
+            "name": "都市再生特別地区",
+            "class": "都市再生特別地区",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/その他地域地区/風致地区",
+            "name": "風致地区",
+            "class": "風致地区",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/その他地域地区/駐車場整備地区",
+            "name": "駐車場整備地区",
+            "class": "駐車場整備地区",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/その他地域地区/駐輪場整備地区",
+            "name": "駐輪場整備地区",
+            "class": "駐輪場整備地区",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/その他地域地区/臨港地区",
+            "name": "臨港地区",
+            "class": "臨港地区",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/その他地域地区/用途白地地域",
+            "name": "用途白地地域",
+            "class": "用途白地地域",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "都市計画情報/都市施設",
+        "name": "都市施設",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/都市施設/都市計画道路",
+            "name": "都市計画道路",
+            "class": "都市計画道路",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/都市施設/都市高速鉄道",
+            "name": "都市高速鉄道",
+            "class": "都市高速鉄道",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/都市施設/下水",
+            "name": "下水",
+            "class": "公共下水道",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "都市計画情報/市街地開発事業",
+        "name": "市街地開発事業",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/市街地開発事業/市街地再開発事業",
+            "name": "市街地再開発事業",
+            "class": "市街地再開発事業",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/市街地開発事業/土地区画整理事業",
+            "name": "土地区画整理事業",
+            "class": "土地区画整理事業",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "DataItem",
+        "id": "都市計画情報/地区計画",
+        "name": "地区計画",
+        "class": "地区計画",
+        "metadata": {}
+      },
+      {
+        "type": "Category",
+        "id": "都市計画情報/立地適正化計画",
+        "name": "立地適正化計画",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/立地適正化計画/広域都市機能誘導区域",
+            "name": "広域都市機能誘導区域",
+            "class": "広域都市機能誘導区域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/立地適正化計画/一般都市機能誘導区域",
+            "name": "一般都市機能誘導区域",
+            "class": "一般都市機能誘導区域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/立地適正化計画/学術都市機能誘導区域",
+            "name": "学術都市機能誘導区域",
+            "class": "学術都市機能誘導区域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/立地適正化計画/居住誘導区域",
+            "name": "居住誘導区域",
+            "class": "居住誘導区域",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "都市計画情報/立地適正化計画/一般居住区域",
+            "name": "一般居住区域",
+            "class": "一般居住区域",
+            "metadata": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Category",
+    "id": "施設情報",
+    "name": "施設情報",
+    "items": [
+      {
+        "type": "Category",
+        "id": "施設情報/くらし",
+        "name": "くらし",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/AED設置場所",
+            "name": "AED設置場所",
+            "class": "AED設置場所",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/aed_location/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/コミュニティセンター",
+            "name": "コミュニティセンター",
+            "class": "コミュニティセンター",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/community_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/ため池一覧",
+            "name": "ため池一覧",
+            "class": "ため池一覧",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/reservoir_list/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/環境施設",
+            "name": "環境施設",
+            "class": "環境施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/environmental_facilities/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/公衆トイレ",
+            "name": "公衆トイレ",
+            "class": "公衆トイレ",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/public_toilet/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/公衆無線LANアクセスポイント",
+            "name": "公衆無線LANアクセスポイント",
+            "class": "公衆無線LANアクセスポイント",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/public_wireless_lan/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/斎場",
+            "name": "斎場",
+            "class": "斎場",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/funeral/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/使用済小型家電リサイクルBOX設置場所一覧",
+            "name": "使用済小型家電リサイクルBOX設置場所一覧",
+            "class": "使用済小型家電リサイクルBOX設置場所一覧",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/recycling_box_installation_location/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/市営住宅",
+            "name": "市営住宅",
+            "class": "市営住宅",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/municipal_housing/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/市民活動・男女共同参画施設",
+            "name": "市民活動・男女共同参画施設",
+            "class": "市民活動・男女共同参画施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/citizen_activity_facility/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/指定収集袋取扱店一覧",
+            "name": "指定収集袋取扱店一覧",
+            "class": "指定収集袋取扱店一覧",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/list_of_designated_collection_bag_dealers/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/地域交流館",
+            "name": "地域交流館",
+            "class": "地域交流館",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/regional_exchange_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/投票所一覧",
+            "name": "投票所一覧",
+            "class": "投票所一覧",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/polling_place_list/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/くらし/墓地",
+            "name": "墓地",
+            "class": "墓地",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/cemetery/data.geojson",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "施設情報/観光・産業",
+        "name": "観光・産業",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "施設情報/観光・産業/観光施設",
+            "name": "観光施設",
+            "class": "観光施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/tourist_facilities/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/観光・産業/市場",
+            "name": "市場",
+            "class": "市場",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/market/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/観光・産業/食肉センターなど",
+            "name": "食肉センターなど",
+            "class": "食肉センターなど",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/meat_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/観光・産業/農業施設一覧",
+            "name": "農業施設一覧",
+            "class": "農業施設一覧",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/agricultural_facilities_list/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/観光・産業/農業体験施設",
+            "name": "農業体験施設",
+            "class": "農業体験施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/agricultural_experience_facility/data.geojson",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "施設情報/文化・スポーツ・公園",
+        "name": "文化・スポーツ・公園",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/グラウンド",
+            "name": "グラウンド",
+            "class": "グラウンド",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/ground/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/その他スポーツ施設",
+            "name": "その他スポーツ施設",
+            "class": "その他スポーツ施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/other_sports_facilities/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/テニスコート",
+            "name": "テニスコート",
+            "class": "テニスコート",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/tennis_court/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/プール",
+            "name": "プール",
+            "class": "プール",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/pool/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/ホール",
+            "name": "ホール",
+            "class": "ホール",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/hole/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/公園",
+            "name": "公園",
+            "class": "公園",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/park/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/図書館",
+            "name": "図書館",
+            "class": "図書館",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/library/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/体育館・武道館",
+            "name": "体育館・武道館",
+            "class": "体育館・武道館",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/gymnasium/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/道の駅一覧",
+            "name": "道の駅一覧",
+            "class": "道の駅一覧",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/road_station_list/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/美術館",
+            "name": "美術館",
+            "class": "美術館",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/amuseum/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/文化財",
+            "name": "文化財",
+            "class": "文化財",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/cultural_property/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/野球場ほか",
+            "name": "野球場ほか",
+            "class": "野球場ほか",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/baseball_ground_other/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/陸上競技場",
+            "name": "陸上競技場",
+            "class": "陸上競技場",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/athletics_stadium/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/歴史・民俗施設",
+            "name": "歴史・民俗施設",
+            "class": "歴史・民俗施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/folklore_facility/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/文化・スポーツ・公園/農村公園",
+            "name": "農村公園",
+            "class": "農村公園",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/rural_park/data.geojson",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "施設情報/保健・医療・福祉",
+        "name": "保健・医療・福祉",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/グループホーム",
+            "name": "グループホーム",
+            "class": "グループホーム",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/group_home/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/その他福祉施設",
+            "name": "その他福祉施設",
+            "class": "その他福祉施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/other_welfare_facilities/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/医療機関",
+            "name": "医療機関",
+            "class": "医療機関",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/hospital/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/市立病院",
+            "name": "市立病院",
+            "class": "市立病院",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/municipal_hospital/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/小規模多機能型居宅介護施設",
+            "name": "小規模多機能型居宅介護施設",
+            "class": "小規模多機能型居宅介護施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/nursing_home/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/障がい福祉施設",
+            "name": "障がい福祉施設",
+            "class": "障がい福祉施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/disabled_welfare_facility/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/診療所",
+            "name": "診療所",
+            "class": "診療所",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/clinic/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/地域包括支援センター",
+            "name": "地域包括支援センター",
+            "class": "地域包括支援センター",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/regional_comprehensive_support_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/福祉会館・社会福祉協議会",
+            "name": "福祉会館・社会福祉協議会",
+            "class": "福祉会館・社会福祉協議会",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/welfare_hall/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/保健所・保健センター",
+            "name": "保健所・保健センター",
+            "class": "保健所・保健センター",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/health_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/老人いこいの家など",
+            "name": "老人いこいの家など",
+            "class": "老人いこいの家など",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/elderly_wedding_house/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/老人福祉センターなど",
+            "name": "老人福祉センターなど",
+            "class": "老人福祉センターなど",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/elderly_welfare_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/保健・医療・福祉/老人福祉施設",
+            "name": "老人福祉施設",
+            "class": "老人福祉施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/elderly_welfare_facility/data.geojson",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "施設情報/教育・子育て",
+        "name": "教育・子育て",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/その他子育て支援施設",
+            "name": "その他子育て支援施設",
+            "class": "その他子育て支援施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/other_child_care_support_facility/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/学校給食調理場",
+            "name": "学校給食調理場",
+            "class": "学校給食調理場",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/school_lunch_kitchen/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/企業主導型保育施設一覧",
+            "name": "企業主導型保育施設一覧",
+            "class": "企業主導型保育施設一覧",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/company_led_childcare_facilities_list/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/高等学校など",
+            "name": "高等学校など",
+            "class": "高等学校など",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/high_school/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/児童館など",
+            "name": "児童館など",
+            "class": "児童館など",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/childrens_hall/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/小学校",
+            "name": "小学校",
+            "class": "小学校",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/primary_school/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/生涯学習施設",
+            "name": "生涯学習施設",
+            "class": "生涯学習施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/lifelong_learning_facility/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/大学",
+            "name": "大学",
+            "class": "大学",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/university/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/地域子育て支援拠点",
+            "name": "地域子育て支援拠点",
+            "class": "地域子育て支援拠点",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/regional_child_rearing_support_base/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/中学校",
+            "name": "中学校",
+            "class": "中学校",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/middle_school/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/認可外保育施設一覧",
+            "name": "認可外保育施設一覧",
+            "class": "認可外保育施設一覧",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/unapproved_childcare_facilities/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/病児・病後児保育施設",
+            "name": "病児・病後児保育施設",
+            "class": "病児・病後児保育施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/infant_childcare_facility/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/保育施設等",
+            "name": "保育施設等",
+            "class": "保育施設等",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/nursery_school/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/民間放課後児童クラブ",
+            "name": "民間放課後児童クラブ",
+            "class": "民間放課後児童クラブ",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/children_club/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/教育・子育て/幼稚園",
+            "name": "幼稚園",
+            "class": "幼稚園",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/kindergarten/data.geojson",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "施設情報/行政機関",
+        "name": "行政機関",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "施設情報/行政機関/ふれあいセンター",
+            "name": "ふれあいセンター",
+            "class": "ふれあいセンター",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/contact_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/行政機関/下水道施設",
+            "name": "下水道施設",
+            "class": "下水道施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/sewer_facility/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/行政機関/市役所・市民サービスセンター",
+            "name": "市役所・市民サービスセンター",
+            "class": "市役所・市民サービスセンター",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/citizen_service_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/行政機関/支所・連絡事務所",
+            "name": "支所・連絡事務所",
+            "class": "支所・連絡事務所",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/branch/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/行政機関/出張所",
+            "name": "出張所",
+            "class": "出張所",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/branch_office/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/行政機関/水道施設",
+            "name": "水道施設",
+            "class": "水道施設",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/water_supply_facility/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/行政機関/総合センター",
+            "name": "総合センター",
+            "class": "総合センター",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/general_center/data.geojson",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "施設情報/交通",
+        "name": "交通",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "施設情報/交通/レンタサイクルポート",
+            "name": "レンタサイクルポート",
+            "class": "レンタサイクルポート",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/bictcle_rental_port/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/交通/市立駐車場",
+            "name": "市立駐車場",
+            "class": "市立駐車場",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/municipal_parking/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/交通/市立駐輪場",
+            "name": "市立駐輪場",
+            "class": "市立駐輪場",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/city_bicycle_parking/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/交通/自転車保管所",
+            "name": "自転車保管所",
+            "class": "自転車保管所",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/bicycle_storage/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/交通/商店街通行量情報",
+            "name": "商店街通行量情報",
+            "class": "商店街通行量情報",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/shopping_street_traffic_information/data.geojson",
+            "metadata": {}
+          }
+        ]
+      },
+      {
+        "type": "Category",
+        "id": "施設情報/防災施設",
+        "name": "防災施設",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "施設情報/防災施設/市民防災センター",
+            "name": "市民防災センター",
+            "class": "市民防災センター",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/citizen_disaster_prevention_center/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/防災施設/指定緊急避難場所・指定避難所",
+            "name": "指定緊急避難場所・指定避難所",
+            "class": "指定緊急避難場所・指定避難所",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/evacuation_space/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/防災施設/消防署・消防出張所",
+            "name": "消防署・消防出張所",
+            "class": "消防署・消防出張所",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/fire_station/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/防災施設/消防屯所",
+            "name": "消防屯所",
+            "class": "消防屯所",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/fire_brigade/data.geojson",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "施設情報/防災施設/津波避難ビル",
+            "name": "津波避難ビル",
+            "class": "津波避難ビル",
+            "geojsonEndpoint": "https://opendata.takamatsu-fact.com/tsunami_evacuation_building/data.geojson",
+            "metadata": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Category",
+    "id": "防災情報",
+    "name": "防災情報",
+    "items": [
+      {
+        "type": "Category",
+        "id": "防災情報/IoT センサー",
+        "name": "IoT センサー",
+        "items": [
+          {
+            "type": "DataItem",
+            "id": "防災情報/IoT センサー/冠水状況",
+            "name": "冠水状況",
+            "class": "冠水状況",
+            "liveLocationId": "FloodSituation",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "防災情報/IoT センサー/降雨量",
+            "name": "降雨量",
+            "class": "降雨量",
+            "liveLocationId": "Rainfall",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "防災情報/IoT センサー/水位",
+            "name": "水位",
+            "class": "水位",
+            "liveLocationId": "WaterLevel",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "防災情報/IoT センサー/水位（県防災）",
+            "name": "水位（県防災）",
+            "class": "水位（県防災）",
+            "liveLocationId": "PrefectureWaterLevel",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "防災情報/IoT センサー/潮位",
+            "name": "潮位",
+            "class": "潮位",
+            "liveLocationId": "TideLevel",
+            "metadata": {}
+          },
+          {
+            "type": "DataItem",
+            "id": "防災情報/IoT センサー/潮位（県防災）",
+            "name": "潮位（県防災）",
+            "class": "潮位（県防災）",
+            "liveLocationId": "PrefectureTideLevel",
+            "metadata": {}
+          }
+        ]
+      }
+    ]
+  }
+]
