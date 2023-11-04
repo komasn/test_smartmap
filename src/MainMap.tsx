@@ -93,9 +93,10 @@ const MainMap: React.FC<Props> = ({catalogData, selectedLayers, setSelectedFeatu
         'source-layer': 'negativecitymask',
         type: 'fill',
         paint: {
-          'fill-color': '#0079C4',
-          'fill-opacity': .3,
-        }
+          'fill-color': '#ff0000',
+//          'fill-opacity': .3,
+          'fill-opacity': 0,
+}
       });
       map.addLayer({
         id: 'negative-city-mask-layer-border',
@@ -103,8 +104,9 @@ const MainMap: React.FC<Props> = ({catalogData, selectedLayers, setSelectedFeatu
         'source-layer': 'negativecitymask',
         type: 'line',
         paint: {
-          'line-color': '#0079C4',
-          'line-opacity': 0.5,
+          'line-color': '#ff0000',
+//          'line-opacity': 0.5,
+          'line-opacity': 0,
           'line-width': 2,
         }
       })
