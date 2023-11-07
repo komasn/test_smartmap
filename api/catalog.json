@@ -7,13 +7,6 @@
     "metadata": {}
   },
   {
-    "type": "DataItem",
-    "id": "市道道路網図",
-    "name": "市道道路網図",
-    "class": "高松市_路線",
-    "metadata": {}
-  },
-  {
     "type": "Category",
     "id": "都市計画情報",
     "name": "都市計画情報",
