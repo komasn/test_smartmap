@@ -365,22 +365,7 @@
             "id": "施設情報/防災施設/指定緊急避難場所・指定避難所",
             "name": "指定緊急避難場所・指定避難所",
             "class": "指定緊急避難場所・指定避難所",
-            "geojsonEndpoint": "https://komasn.github.io/maptest/sakaide_bousai/sakaide_hinanbasho.geojson",
-            "metadata": {}
-          }
-        ]
-      },
-      {
-        "type": "Category",
-        "id": "施設情報/防災施設",
-        "name": "防災施設",
-        "items": [
-          {
-            "type": "DataItem",
-            "id": "施設情報/防災施設/指定緊急避難場所・指定避難所",
-            "name": "指定緊急避難場所・指定避難所",
-            "class": "指定緊急避難場所・指定避難所",
-            "geojsonEndpoint": "https://komasn.github.io/maptest/sakaide_bousai/sakaide_hinanbasho.geojson",
+            "geojsonEndpoint": "http://sakaide:123@water.openatoms.live-on.net/d/data/wm0230001_0001/dataSet.geojson",
             "metadata": {}
           }
         ]
